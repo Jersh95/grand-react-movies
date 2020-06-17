@@ -1,0 +1,14 @@
+.video-card {
+  margin-bottom: 2rem;
+  cursor: pointer;
+  
+  .video-card__body {
+
+    .video-card__title {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      line-height: normal;
+    }
+  }
+}

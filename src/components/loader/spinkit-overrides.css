@@ -1,0 +1,5 @@
+@import "~spinkit/spinkit.min.css";
+:root {
+  --sk-size: 60px;
+  --sk-color: #333;
+}

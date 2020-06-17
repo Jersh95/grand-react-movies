@@ -2,6 +2,9 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import {BrowserRouter, Link, Switch, Route} from 'react-router-dom';
+import './header.scss';
+import CatalogContainer from '../catalog/CatalogContainer';
 
 export default class Header extends React.Component {
 
@@ -11,20 +14,28 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <div>
-        <Navbar bg='light' expand='lg'>
-          <Navbar.Brand href='#home'>React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
-          <Navbar.Collapse>
-            <Nav id='header-nav' className='mr-auto'>
-              <Nav.Link href='#home'>Home</Nav.Link>
-              <Nav.Link href='#about-me'>About Me</Nav.Link>
-              <NavDropdown title='Projects' id='projects-dropdown'>
-                <NavDropdown.Item href='https://github.com/Jersh95/Expenses' target='blank' className='header__nav__dropdown__item'>Expense Tracker</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
+      <div id='menu-router'>
+        <BrowserRouter>
+          <Navbar bg="dark" variant="dark" expand='lg'>
+            <Navbar.Brand>
+              <Link to='/'>Grand React Movies</Link>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls='basic-navbar-nav' />
+            <Navbar.Collapse>
+              <Nav id='header-nav' className='mr-auto'>
+                <Link to='/shop'>Shop</Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+
+          <div>
+            <Switch>
+              <Route exact path='/shop'>
+                <CatalogContainer/>
+              </Route>
+            </Switch>
+          </div>
+        </BrowserRouter>
       </div>
     );
   }
