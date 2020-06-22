@@ -13,7 +13,7 @@ const movieService = {
     return config;
   },
 
-  async discoverNewMovies(params) {
+  async discoverNewMovies() {
     const config = await this.getConfig();
     return await moviedb.discoverMovie({
       'language': 'en-US',
