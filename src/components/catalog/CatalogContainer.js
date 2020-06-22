@@ -1,8 +1,8 @@
 import React from 'react';
-import {discoverNewMovies} from '../../service/MovieService';
 import VideoCard from './video-card/VideoCard';
 import Row from 'react-bootstrap/Row';
 import WaveLoader from '../loader/WaveLoader';
+import MovieService from '../../service/MovieService';
 
 export default class CatalogContainer extends React.Component {
 
@@ -11,7 +11,7 @@ export default class CatalogContainer extends React.Component {
   };
 
   componentDidMount() {
-    discoverNewMovies().then(movies => {
+    MovieService.discoverNewMovies().then(movies => {
       this.setState({videos: movies});
     });
   }
@@ -28,7 +28,7 @@ export default class CatalogContainer extends React.Component {
               {videos.length > 0 ? (
                 videos.map(video => <VideoCard video={video} key={video.id}/> )
               ) : (
-                <div>No results found</div>
+                <div id='no-results-container'>No results found</div>
               )}
             </React.Fragment>
           )}

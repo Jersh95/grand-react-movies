@@ -9,13 +9,13 @@ const RatingStars = (props) => {
   let stars = [];
 
   for (let i = 0; i < roundedDown; i++) {
-    stars.push(<span className="material-icons" key={`whole-${i}`}>star</span>)
+    stars.push(<span className="material-icons star star--full" key={`whole-${i}`}>star</span>)
   }
   if(roundedRating - roundedDown === .5) {
-    stars.push(<span className="material-icons" key='half'>star_half</span>)
+    stars.push(<span className="material-icons star star--half" key='half'>star_half</span>)
   }
   for (let i = 0; i < 5 - roundedUp; i++) {
-    stars.push(<span className="material-icons" key={`border-${i}`}>star_border</span>)
+    stars.push(<span className="material-icons star star--empty" key={`border-${i}`}>star_border</span>)
   }
 
   return (

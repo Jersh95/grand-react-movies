@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import {BrowserRouter, Link, Switch, Route} from 'react-router-dom';
 import './header.scss';
 import CatalogContainer from '../catalog/CatalogContainer';

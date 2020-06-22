@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders 1`] = `
+<div
+  id="menu-router"
+>
+  <nav
+    className="navbar navbar-expand-lg navbar-dark bg-dark"
+  >
+    <span
+      className="navbar-brand"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        Grand React Movies
+      </a>
+    </span>
+    <button
+      aria-controls="basic-navbar-nav"
+      aria-label="Toggle navigation"
+      className="navbar-toggler collapsed"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      aria-expanded={null}
+      className="navbar-collapse collapse"
+    >
+      <div
+        className="mr-auto navbar-nav"
+        id="header-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          href="/shop"
+          onClick={[Function]}
+        >
+          Shop
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div />
+</div>
+`;
